@@ -366,11 +366,11 @@ echo -e "${jeshile} └───────────────────
 echo " "
 #mkdir /var/www/html
 #cd /var/www/html #DESTINACIONI KRYESOR ADMIN - TEMPLATES ETC
-cd /var/www/html && wget -o Xtream_Codes_v1.0.60-RT.zip https://www.dropbox.com/s/rhr66ubu46e0kw0/Xtream_Codes_v1.0.60-RT.zip?dl=0 && unzip Xtream_Codes_v1.0.60-RT.zip && cp /var/www/html/downloads/iptv_panel_pro.zip /tmp && chmod a+x /tmp/iptv_panel_pro.zip && cp /var/www/html/downloads/install_iptv_pro.php /root/ && cd /root && chmod a+x /root/install_iptv_pro.php
+cd /var/www/html && wget -O Xtream_Codes_v1.0.60-RT.zip https://www.dropbox.com/s/rhr66ubu46e0kw0/Xtream_Codes_v1.0.60-RT.zip?dl=0 && unzip Xtream_Codes_v1.0.60-RT.zip && cp /var/www/html/downloads/iptv_panel_pro.zip /tmp && chmod a+x /tmp/iptv_panel_pro.zip && cp /var/www/html/downloads/install_iptv_pro.php /root/ && cd /root && chmod a+x /root/install_iptv_pro.php
 php install_iptv_pro.php
-chmod 775 /home/admin/web/xtream.md/public_html/Xtream_Codes_v1.0.60-RT.zip
-rm /home/admin/web/xtream.md/public_html/Xtream_Codes_v1.0.60-RT.zip
-cp /home/admin/web/xtream.md/public_html/downloads/iptv_panel_pro.zip /tmp
+chmod 775 /var/www/html/Xtream_Codes_v1.0.60-RT.zip
+rm /var/www/html/Xtream_Codes_v1.0.60-RT.zip
+cp /var/www/html/downloads/iptv_panel_pro.zip /tmp
 chmod a+x /tmp/iptv_panel_pro.zip
 #
 echo " "
@@ -381,11 +381,11 @@ echo -e "${jeshile} └───────────────────
 echo " "
 cp /etc/init.d/xtreamcodes_pro_panel /etc/init.d/xtreamcodes_pro_panel_backup_by_RT
 echo -e "${jeshile} [+] /etc/init.d/xtreamcodes_pro_panel Backup as xtreamcodes_pro_panel_backup_by_RT \e[0m"
-cp /home/admin/web/xtream.md/public_html/crack/xtreamcodes_pro_panel /etc/init.d/xtreamcodes_pro_panel
+cp /var/www/html/crack/xtreamcodes_pro_panel /etc/init.d/xtreamcodes_pro_panel
 echo -e "${jeshile} [+] New xtreamcodes_pro_panel File Coppied to /etc/init.d/xtreamcodes_pro \e[0m"
 cp /etc/rc.local /etc/rc.local_backup_by_RT
 echo -e "${jeshile} [+] /etc/rc.local backuped as rc.local_backup_by_RT \e[0m"
-cp /home/admin/web/xtream.md/public_html/crack/rc.local /etc/rc.local
+cp /var/www/html/crack/rc.local /etc/rc.local
 echo -e "${jeshile} [+] New rc.local File Coppied to /etc/rc.local \e[0m"
 chmod +x /etc/rc.local
 echo -e "${jeshile} [+] chmod +x rc.local \e[0m"
@@ -397,7 +397,7 @@ echo -e "${jeshile} └───────────────────
 echo " "
 cp /etc/mysql/my.cnf /etc/mysql/my_config.cnf_backup_by_RT
 echo -e "${jeshile} [+] /etc/mysql/my.cnf backuped as my.cnf_backup_by_RT \e[0m"
-echo -e "${jeshile} [+] ORIGINAL FILE /home/admin/web/xtream.md/public_html/crack/mysqlcnf/original \e[0m"
+echo -e "${jeshile} [+] ORIGINAL FILE /var/www/html/crack/mysqlcnf/original \e[0m"
 sed -i 's/max_connections = 5000/max_connections = 20000/g' /etc/mysql/my.cnf
 echo -e "${jeshile} [+] MYSQL Connections Has Been Now Modified Minimum 5000 to Maximum 20000 \e[0m"
 service mysql restart
