@@ -7,7 +7,7 @@
 
 #[1] wget https://raw.githubusercontent.com/leiaaloha/xc-tv/master/xc_1.0.60_RT.sh && chmod a+x xc_1.0.60_RT.sh && ./xc_1.0.60_RT.sh
 
-#[2] Enter IPTV licence: rottyman
+#[2] Enter IPTV licence: 
 
 #[3] Enter  BroadCasting Port, > 8888
 
