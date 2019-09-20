@@ -9,6 +9,6 @@
 
 #[2] Enter IPTV licence: rottyman
 
-#[3] ENTER PORT
+#[3] Enter  BroadCasting Port, > 8888
 
 #[4] reboot
