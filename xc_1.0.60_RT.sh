@@ -366,7 +366,7 @@ echo -e "${jeshile} └───────────────────
 echo " "
 #mkdir /var/www/html
 #cd /var/www/html #DESTINACIONI KRYESOR ADMIN - TEMPLATES ETC
-cd /var/www/html && wget -O Xtream_Codes_v1.0.60-RT.zip https://www.dropbox.com/s/rhr66ubu46e0kw0/Xtream_Codes_v1.0.60-RT.zip?dl=0 && unzip Xtream_Codes_v1.0.60-RT.zip && cp /var/www/html/downloads/iptv_panel_pro.zip /tmp && chmod a+x /tmp/iptv_panel_pro.zip && cp /var/www/html/downloads/install_iptv_pro.php /root/ && cd /root && chmod a+x /root/install_iptv_pro.php
+cd /var/www/html && wget -O Xtream_Codes_v1.0.60-RT.zip https://www.dropbox.com/s/wqc1qf3ehxmrq8y/Xtream_Codes_v1.0.60-RT.zip?dl=0 && unzip Xtream_Codes_v1.0.60-RT.zip && cp /var/www/html/downloads/iptv_panel_pro.zip /tmp && chmod a+x /tmp/iptv_panel_pro.zip && cp /var/www/html/downloads/install_iptv_pro.php /root/ && cd /root && chmod a+x /root/install_iptv_pro.php
 php install_iptv_pro.php
 chmod 775 /var/www/html/
 chown -R www-data:www-data /var/www/html/
