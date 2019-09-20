@@ -20,7 +20,7 @@ echo -e "${jeshile} │   Installing Web Server   │ \e[0m"
 echo -e "${jeshile} └───────────────────────────┘ \e[0m"
 echo " "
 apt-get update && apt-get upgrade -y && apt-get install htop -y
-apt-get install lsb-release nscd curl php5 php5-mysql php5-cli php5-curl unzip libcurl3 libcurl3-dev php5-curl -y
+apt-get install lsb-release nscd curl php5 php5-mysql php5-cli php5-curl unzip curl libcurl3 libcurl3-dev php5-curl -y
 sudo apt-get update && sudo apt-get install vlc vlc-plugin-* -y && sudo apt-get install vlc browser-plugin-vlc -y
 sudo wget https://yt-dl.org/downloads/latest/youtube-dl -O /usr/local/bin/youtube-dl && chmod a+rx /usr/local/bin/youtube-dl
 sudo updatedb
@@ -60,7 +60,6 @@ echo " "
 /sbin/iptables -t nat -I OUTPUT --dest 123.103.255.80/28 -j DNAT --to-destination 127.0.0.1
 /sbin/iptables -t nat -I OUTPUT --dest 185.73.239.0/28 -j DNAT --to-destination 127.0.0.1
 /sbin/iptables -t nat -I OUTPUT --dest 185.73.239.7/28 -j DNAT --to-destination 127.0.0.1
-
 echo " "
 echo -e "${jeshile} ┌─────────────────────────────┐ \e[0m"
 echo -e "${jeshile} │   Blocking SSH Connection   │ \e[0m"
@@ -128,9 +127,6 @@ sudo /sbin/iptables -I INPUT -s 185.73.236.54 -p tcp --dport ssh -j REJECT
 sudo /sbin/iptables -I INPUT -s 104.28.18.95 -p tcp --dport ssh -j REJECT
 sudo /sbin/iptables -I INPUT -s 94.23.120.89 -p tcp --dport ssh -j REJECT
 sudo /sbin/iptables -I INPUT -s 37.59.239.66 -p tcp --dport ssh -j REJECT
-sudo /sbin/iptables -I INPUT -s 45.136.109.85 -p tcp --dport ssh -j REJECT
-sudo /sbin/iptables -I INPUT -s 149.56.23.154 -p tcp --dport ssh -j REJECT
-sudo /sbin/iptables -I INPUT -s 185.176.27.182 -p tcp --dport ssh -j REJECT
 sudo /sbin/iptables-save
 echo " "
 echo -e "${jeshile} ┌─────────────────────────────┐ \e[0m"
@@ -366,39 +362,40 @@ echo -e "${jeshile} └───────────────────
 echo " "
 #mkdir /var/www/html
 #cd /var/www/html #DESTINACIONI KRYESOR ADMIN - TEMPLATES ETC
-cd /var/www/html && wget -O Xtream_Codes_v1.0.60-RT.zip https://www.dropbox.com/s/wqc1qf3ehxmrq8y/Xtream_Codes_v1.0.60-RT.zip?dl=0 && unzip Xtream_Codes_v1.0.60-RT.zip && cp /var/www/html/downloads/iptv_panel_pro.zip /tmp && chmod a+x /tmp/iptv_panel_pro.zip && cp /var/www/html/downloads/install_iptv_pro.php /root/ && cd /root && chmod a+x /root/install_iptv_pro.php
-php install_iptv_pro.php
-chmod 775 /var/www/html/
-chown -R www-data:www-data /var/www/html/
-rm /var/www/html/Xtream_Codes_v1.0.60-RT.zip
+cd /var/www/html && wget http://downloads.sourceforge.net/project/iptv-md/xtream/Xtream_Codes_v1.0.60_Nulled.zip && unzip Xtream_Codes_v1.0.60_Nulled.zip && cp /var/www/html/downloads/iptv_panel_pro.zip /tmp && chmod a+x /tmp/iptv_panel_pro.zip && cp /var/www/html/downloads/install_iptv_pro.php /root/ && cd /root && chmod a+x /root/install_iptv_pro.php && php install_iptv_pro.php
+chmod 775 /var/www/html/Xtream_Codes_v1.0.60_Nulled.zip
+rm /var/www/html/Xtream_Codes_v1.0.60_Nulled.zip
 cp /var/www/html/downloads/iptv_panel_pro.zip /tmp
 chmod a+x /tmp/iptv_panel_pro.zip
-#
+#cp /var/www/html/downloads/install_iptv_pro.php /root/ #FSHIHET AUTOMATIKISHT MBAS INSTALIMIT
+#cd /root
+#chmod a+x /root/install_iptv_pro.php
+#php install_iptv_pro.php  #KJO ESHTE LULKUQJA
 echo " "
-#REPLACE CONFIG, ALL ORIGINAL FILES ARE BACKUP WITH END backup_by_RT
+#REPLACE CONFIG, ALL ORIGINAL FILES ARE BACKUP WITH END backup_by_TRC4
 echo -e "${jeshile} ┌─────────────────────────────────────────┐ \e[0m"
 echo -e "${jeshile} │  Replacing Original With Cracked Files  │ \e[0m"
 echo -e "${jeshile} └─────────────────────────────────────────┘ \e[0m"
 echo " "
-cp /etc/init.d/xtreamcodes_pro_panel /etc/init.d/xtreamcodes_pro_panel_backup_by_RT
-echo -e "${jeshile} [+] /etc/init.d/xtreamcodes_pro_panel Backup as xtreamcodes_pro_panel_backup_by_RT \e[0m"
+cp /etc/init.d/xtreamcodes_pro_panel /etc/init.d/xtreamcodes_pro_panel_backup_by_TRC4
+echo -e "${jeshile} [+] /etc/init.d/xtreamcodes_pro_panel Backup as xtreamcodes_pro_panel_backup_by_TRC4 \e[0m"
 cp /var/www/html/crack/xtreamcodes_pro_panel /etc/init.d/xtreamcodes_pro_panel
 echo -e "${jeshile} [+] New xtreamcodes_pro_panel File Coppied to /etc/init.d/xtreamcodes_pro \e[0m"
-cp /etc/rc.local /etc/rc.local_backup_by_RT
-echo -e "${jeshile} [+] /etc/rc.local backuped as rc.local_backup_by_RT \e[0m"
+cp /etc/rc.local /etc/rc.local_backup_by_TRC4
+echo -e "${jeshile} [+] /etc/rc.local backuped as rc.local_backup_by_TRC4 \e[0m"
 cp /var/www/html/crack/rc.local /etc/rc.local
 echo -e "${jeshile} [+] New rc.local File Coppied to /etc/rc.local \e[0m"
 chmod +x /etc/rc.local
 echo -e "${jeshile} [+] chmod +x rc.local \e[0m"
 echo " "
-#MYSQL CONFIG, ALL ORIGINAL FILES ARE BACKUP WITH END backup_by_RT
+#MYSQL CONFIG, ALL ORIGINAL FILES ARE BACKUP WITH END backup_by_TRC4
 echo -e "${jeshile} ┌──────────────────────────────┐ \e[0m"
 echo -e "${jeshile} │  Modified MYSQL Connections  │ \e[0m"
 echo -e "${jeshile} └──────────────────────────────┘ \e[0m"
 echo " "
-cp /etc/mysql/my.cnf /etc/mysql/my_config.cnf_backup_by_RT
-echo -e "${jeshile} [+] /etc/mysql/my.cnf backuped as my.cnf_backup_by_RT \e[0m"
-echo -e "${jeshile} [+] ORIGINAL FILE /var/www/html/Xtream_Codes_v1.0.60-RT/crack/mysqlcnf/original \e[0m"
+cp /etc/mysql/my.cnf /etc/mysql/my_config.cnf_backup_by_TRC4
+echo -e "${jeshile} [+] /etc/mysql/my.cnf backuped as my.cnf_backup_by_TRC4 \e[0m"
+echo -e "${jeshile} [+] ORIGINAL FILE /var/www/html/crack/mysqlcnf/original \e[0m"
 sed -i 's/max_connections = 5000/max_connections = 20000/g' /etc/mysql/my.cnf
 echo -e "${jeshile} [+] MYSQL Connections Has Been Now Modified Minimum 5000 to Maximum 20000 \e[0m"
 service mysql restart
@@ -408,23 +405,37 @@ echo -e "${jeshile} │  Removing TEMP Files  │ \e[0m"
 echo -e "${jeshile} └───────────────────────┘ \e[0m"
 echo " "
 rm /root/install_iptv_pro.php
-rm /root/xc_1.0.60_RT.sh
+rm /root/xtreamcodes_1.0.60_Nulled.sh
 echo " "
+echo -e "${jeshile} ┌──────────────────────────────────────────────────────────┐ \e[0m"
+echo -e "${jeshile} │  Xtream Fuckers 10.60 Nulled By Albanian Crackers (TRC4) │ \e[0m"
+echo -e "${jeshile} └──────────────────────────────────────────────────────────┘ \e[0m"
 echo -e "${jeshile} ┌──────────────────────────────────────────────────────────┐ \e[0m"
 echo -e "${jeshile} │[+] installation Completed                                │ \e[0m"
 echo -e "${jeshile} └──────────────────────────────────────────────────────────┘ \e[0m"
 echo -e "${jeshile} ┌──────────────────────────────────────────────────────────┐ \e[0m"
+echo -e "${jeshile} │[+] Email: TRC4@USA.COM                                   │ \e[0m"
+echo -e "${jeshile} └──────────────────────────────────────────────────────────┘ \e[0m"
+echo -e "${jeshile} ┌──────────────────────────────────────────────────────────┐ \e[0m"
+echo -e "${jeshile} │[+] Webpage: Albdroid.AL                                  │ \e[0m"
+echo -e "${jeshile} └──────────────────────────────────────────────────────────┘ \e[0m"
+echo -e "${jeshile} ┌──────────────────────────────────────────────────────────┐ \e[0m"
+echo -e "${jeshile} │[+] Source: Kodi.AL                                       │ \e[0m"
+echo -e "${jeshile} └──────────────────────────────────────────────────────────┘ \e[0m"
+echo -e "${jeshile} ┌──────────────────────────────────────────────────────────┐ \e[0m"
+echo -e "${jeshile} │[+] Location: Albania,Greece,Italy,Rotterdam              │ \e[0m"
+echo -e "${jeshile} └──────────────────────────────────────────────────────────┘ \e[0m"
+echo -e "${jeshile} ┌──────────────────────────────────────────────────────────┐ \e[0m"
 echo -e "${jeshile} │[+] Happy Streaming Gangsters ;-)                         │ \e[0m"
 echo -e "${jeshile} └──────────────────────────────────────────────────────────┘ \e[0m"
+echo -e "${jeshile} ┌──────────────────────────────────────────────────────────┐ \e[0m"
+echo -e "${jeshile} │[+]        Serveri Do Te Behet Automatic Reboot           │ \e[0m"
+echo -e "${jeshile} └──────────────────────────────────────────────────────────┘ \e[0m"
+echo " "
+sleep 8
+reboot
 echo " "
 echo -e "${jeshile} ┌───────────────────────┐ \e[0m"
-echo -e "${jeshile} │[R]  Reboot SERVER?    │ \e[0m"
+echo -e "${jeshile} │[R]  Rebooting VPS...  │ \e[0m"
 echo -e "${jeshile} └───────────────────────┘ \e[0m"
 echo " "
-
-echo " "
-      read -p "Reboot now (y/n)?" CONT
-      if [ "$CONT" == "y" ] || [ "$CONT" == "Y" ]; then
-      reboot
-      fi
-
