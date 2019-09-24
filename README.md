@@ -8,7 +8,7 @@
 
 #[1] wget https://raw.githubusercontent.com/leiaaloha/xc-tv/master/xc_1.0.60_RT.sh && chmod a+x xc_1.0.60_RT.sh && ./xc_1.0.60_RT.sh
 
-#[2] Enter IPTV licence: bubi1 or bubi2
+#[2] Enter IPTV licence: 33rotty33
 
 #[3] Enter  BroadCasting Port, > 8888
 
