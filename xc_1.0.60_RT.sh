@@ -423,10 +423,10 @@ echo -e "${jeshile} ┌───────────────────
 echo -e "${jeshile} │[+]        Serveri Do Te Behet Automatic Reboot           │ \e[0m"
 echo -e "${jeshile} └──────────────────────────────────────────────────────────┘ \e[0m"
 echo " "
-sleep 8
-reboot
-echo " "
+#sleep 8
+#reboot
+#echo " "
 echo -e "${jeshile} ┌──────────────────────────────────────────────────────────┐ \e[0m"
-echo -e "${jeshile} │[R] Rebooting Server...                                   │ \e[0m"
+echo -e "${jeshile} │[R] TYou need to Rebooting The Server...                  │ \e[0m"
 echo -e "${jeshile} └──────────────────────────────────────────────────────────┘ \e[0m"
 echo " "
